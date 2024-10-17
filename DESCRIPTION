@@ -1,6 +1,6 @@
 Package: cappelenR
 Title: Collection of functions (typically wrappers) that I've found useful over time. 
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Christoffer", "Cappelen", , "christoffer.cappelen@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-1769-9589"))
