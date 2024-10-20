@@ -17,6 +17,7 @@ Suggests:
     fixest,
     ggplot2,
     modelsummary,
-    sensemakr
+    sensemakr,
+    wesanderson
 Depends: 
     R (>= 4.3.0)
