@@ -10,6 +10,9 @@
 #' @param append_x Dataframe to append the coefficient estimates (must be suppled if
 #'  `append` is `TRUE`).
 #'
+#' @import cli
+#' @import dplyr
+#' @import fixest
 #' @return A dataframe of coefficient estimates and confidence intervals.
 #' @export
 #'

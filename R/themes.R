@@ -98,13 +98,13 @@ my_maptheme <- function(map_grid = FALSE,
 #' Limit map extent in terms of a shape's bounding box.
 #'
 #' @param shp Shape whose bounding box defines the extent of the map.
-#' @param extend Numerical vector of length 2, if the extent of `shp` should be extended.
+#' @param expand Numerical vector of length 2, if the extent of `shp` should be extended.
 #'   First element extends the x-axis, while the second element extends the y-axis. The map
 #'   will be extended in both directions equally. That is, if `extend` is `c(2,2)`, the y-axis
 #'   will be extended 2 units (degrees) from its current minimum and 2 units from its current
 #'   maximum.
-#' @param extend_x Numerical scalar, specify only the extension of the x-axis.
-#' @param extend_y Numerical scalar, specify only the extension of the y-axis.
+#' @param expand_x Numerical scalar, specify only the extension of the x-axis.
+#' @param expand_y Numerical scalar, specify only the extension of the y-axis.
 #'
 #' @return [ggplot2::lims()] element
 #'
@@ -116,7 +116,7 @@ my_maptheme <- function(map_grid = FALSE,
 
 coord_bbox <- function(shp, expand = c(0,0), expand_x, expand_y) {
   if ((!missing(expand_x) && missing(expand_y)) || (!missing(expand_y) && missing(expand_x))) {
-    cli::cl_abort("Both {.arg expand_x} and {.arg expand_y} must be specified.")
+    cli::cli_abort("Both {.arg expand_x} and {.arg expand_y} must be specified.")
   }
 
   if (!missing(expand_x) && !missing(expand_y)) {
@@ -137,7 +137,7 @@ coord_bbox <- function(shp, expand = c(0,0), expand_x, expand_y) {
     }
 
     if (!is.numeric(expand)) {
-      cli::cli_abprt("{.arg expand} must be numeric vector of length 2.")
+      cli::cli_abort("{.arg expand} must be numeric vector of length 2.")
     }
 
     expand <- expand * c(-1, 1)

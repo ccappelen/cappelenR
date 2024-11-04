@@ -9,15 +9,15 @@ coord_bbox(shp, expand = c(0, 0), expand_x, expand_y)
 \arguments{
 \item{shp}{Shape whose bounding box defines the extent of the map.}
 
-\item{extend}{Numerical vector of length 2, if the extent of \code{shp} should be extended.
+\item{expand}{Numerical vector of length 2, if the extent of \code{shp} should be extended.
 First element extends the x-axis, while the second element extends the y-axis. The map
 will be extended in both directions equally. That is, if \code{extend} is \code{c(2,2)}, the y-axis
 will be extended 2 units (degrees) from its current minimum and 2 units from its current
 maximum.}
 
-\item{extend_x}{Numerical scalar, specify only the extension of the x-axis.}
+\item{expand_x}{Numerical scalar, specify only the extension of the x-axis.}
 
-\item{extend_y}{Numerical scalar, specify only the extension of the y-axis.}
+\item{expand_y}{Numerical scalar, specify only the extension of the y-axis.}
 }
 \value{
 \code{\link[ggplot2:lims]{ggplot2::lims()}} element

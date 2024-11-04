@@ -29,6 +29,9 @@
 #' @param panel_no Integer, the number of panel in the multipanel table.
 #' @param panel_header Character, header of the panel.
 #'
+#' @import fixest
+#' @import stringr
+#'
 #' @return Returns invisibly
 #' @export
 #'
