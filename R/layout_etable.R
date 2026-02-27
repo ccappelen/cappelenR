@@ -307,7 +307,7 @@ define_fitstats <- function() {
 #'
 #' @return Returns invisibly
 #' @export
-table_style <- function() {
+table_style <- function(line_top = "", line_bottom = "") {
   fixest::style.tex(
     main = "aer",
     stats.title = "\\midrule",
@@ -318,8 +318,8 @@ table_style <- function() {
     # tablefoot.title = "\midrule",
     yesNo = c("$\\checkmark$", ""),
     # yesNo = c("Yes", "No"),
-    line.bottom = "",
-    line.top = "",
+    line.bottom = line_bottom,
+    line.top = line_top,
     fixef.suffix = " FE",
     model.format = "(1)")
 }
